@@ -1,0 +1,12 @@
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\BLL.deps.json
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\BLL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\BLL.pdb
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\refint\BLL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.pdb
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\ref\BLL.dll
