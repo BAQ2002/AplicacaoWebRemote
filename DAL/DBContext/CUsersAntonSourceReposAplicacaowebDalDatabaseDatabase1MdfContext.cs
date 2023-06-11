@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace MODEL;
+using MODEL;
+
+namespace DAL.DBContext;
 
 public partial class CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext : DbContext
 {
