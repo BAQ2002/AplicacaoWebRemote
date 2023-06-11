@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLLservice\\BLLservice.csproj": {}
+    "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLLservice\\BLLservice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLLservice\\BLLservice.csproj": {
+    "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLLservice\\BLLservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLLservice\\BLLservice.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLLservice\\BLLservice.csproj",
         "projectName": "BLLservice",
-        "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLLservice\\BLLservice.csproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLLservice\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLLservice\\BLLservice.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLLservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\BLL.csproj"
+              "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj": {
-                "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj"
+              "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj": {
+                "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj"
               }
             }
           }
@@ -65,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\BLL.csproj": {
+    "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,11 +94,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\DAL.csproj"
+              "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj": {
-                "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj"
+              "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj": {
+                "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj"
               }
             }
           }
@@ -127,21 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\DAL.csproj": {
+    "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +156,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj": {
-                "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj"
+              "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj": {
+                "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj"
               }
             }
           }
@@ -202,21 +203,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj": {
+    "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj",
+        "projectUniqueName": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj",
         "projectName": "MODEL",
-        "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\obj\\",
+        "projectPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\MODEL.csproj",
+        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\victo\\Source\\Repos\\AplicacaoWebRemote\\MODEL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -257,7 +258,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
