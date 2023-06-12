@@ -148,7 +148,7 @@
         "projectName": "MODEL",
         "projectPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\MODEL.csproj",
         "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\Source\\Repos\\AplicacaoWeb\\MODEL\\obj\\",
+        "outputPath": "C:\\Users\\anton\\source\\repos\\AplicacaoWeb\\MODEL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
