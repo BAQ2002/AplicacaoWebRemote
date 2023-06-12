@@ -36,7 +36,14 @@ namespace BLL
             }
         }
 
-
+        public static List<TbPlayer> GetByTeam(int id)
+        {
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
+            {
+                var players = dbContext.TbPlayers.Where(p => p.Id == id).ToList();
+                return players;
+            }
+        }
 
 
 

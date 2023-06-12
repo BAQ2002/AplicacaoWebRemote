@@ -19,21 +19,48 @@ namespace BLL
 
             }
         }
-        public static TbMatch GetById(int id)
+        public static Match GetById(int id)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                 var _tbMatch = dbContext.TbMatches.Single(P => P.Id == id);
-                return _tbMatch;
+
+                Match match = MatchCronc(_tbMatch);
+               
+                return match;
+
             }
         }
-        public static List<TbMatch> GetAll()
+        public static List<Match> GetAll()
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                 var _tbMatch = dbContext.TbMatches.ToList();
-                return _tbMatch;
+                 
+                List<Match> list = new List<Match>();
+
+                foreach (TbMatch m in _tbMatch)
+                {
+                    list.Add(MatchCronc(m));
+                }
+                return list;
             }
+        }
+
+
+
+        private static Match MatchCronc(TbMatch _tbMatch)
+        {
+            Match match = new Match();
+            match.Id = _tbMatch.Id;
+            match.WinsBlue = _tbMatch.WinsBlue;
+            match.WinsRed = _tbMatch.WinsRed;
+            match.Date = _tbMatch.Date;
+
+            match.TeamBlue = PlayerInMatchRepos.GetByTeam(_tbMatch.TeamBlue);
+            match.TeamRed = PlayerInMatchRepos.GetByTeam(_tbMatch.TeamRed);
+
+            return match;
         }
 
 

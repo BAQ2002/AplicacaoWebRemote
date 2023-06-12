@@ -12,11 +12,11 @@ namespace BLLservice.Controllers
     {
 
         [HttpGet(Name = "GetMatch")]
-        public ActionResult<List<TbMatch>> GetMatch()
+        public ActionResult<List<Match>> GetMatch()
         {
             try
             {
-                List<TbMatch> list = MatchRepos.GetAll();
+                List<Match> list = MatchRepos.GetAll();
                 if (list != null) { return Ok(list); }
                 return NotFound();
             }
@@ -31,9 +31,9 @@ namespace BLLservice.Controllers
 
 
         [HttpGet("{id}", Name = "GetMatchById")]
-        public ActionResult<TbMatch> GetMatchById(int id)
+        public ActionResult<Match> GetMatchById(int id)
         {
-            TbMatch _match = MatchRepos.GetById(id);
+            Match _match = MatchRepos.GetById(id);
 
             try
             {
