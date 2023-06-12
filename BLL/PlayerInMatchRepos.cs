@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class PlayerInMatchRepos
+    public static class PlayerInMatchRepos
     {
         public static void Add(TbPlayerInMatch _tbPlayerInMatch)
         {
@@ -19,11 +19,11 @@ namespace BLL
 
             }
         }
-        public static TbPlayerInMatch GetById(int Id)
+        public static TbPlayerInMatch GetById(int id)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-                var _tbPlayerInMatch = dbContext.TbPlayerInMatches.Single(P => P.Id == Id);
+                var _tbPlayerInMatch = dbContext.TbPlayerInMatches.Single(P => P.Id == id);
                 return _tbPlayerInMatch;
             }
         }

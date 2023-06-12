@@ -10,3 +10,8 @@ C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.dll
 C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\refint\BLL.dll
 C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.pdb
 C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\ref\BLL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\DAL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\MODEL.dll
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\DAL.pdb
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\bin\Debug\net6.0\MODEL.pdb
+C:\Users\anton\source\repos\AplicacaoWeb\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete

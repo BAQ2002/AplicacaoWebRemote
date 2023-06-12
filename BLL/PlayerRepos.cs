@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class PlayerRepos
+    public static class PlayerRepos
     {
 
         public static void Add(TbPlayer _player)
@@ -21,11 +21,19 @@ namespace BLL
             }
         }
 
-        public static TbPlayer GetById(int Id)
+        public static TbPlayer GetById(int id)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-                var player = dbContext.TbPlayers.Single(P => P.Id == Id);
+                var player = dbContext.TbPlayers.Single(P => P.Id == id);
+                return player;
+            }
+        }
+        public static TbPlayer GetByUsername(string username)
+        {
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
+            {
+                var player = dbContext.TbPlayers.Single(P => P.Username == username);
                 return player;
             }
         }
@@ -34,8 +42,8 @@ namespace BLL
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-                var player = dbContext.TbPlayers.ToList();
-                return player;
+                var _player = dbContext.TbPlayers.ToList();
+                return _player;
             }
         }
 
