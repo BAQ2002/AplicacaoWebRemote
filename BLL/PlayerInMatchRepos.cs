@@ -56,7 +56,11 @@ namespace BLL
         public static void TbPlayerInMatchBuilder(TbMatch _tbMatch)
         {
             TbPlayerInMatch _tbPlayerInMatch = new TbPlayerInMatch();
-            _tbPlayerInMatch.Id = _tbMatch.Id;
+            
+            string stringId = _tbMatch.Id.ToString() + _tbPlayerInMatch.IdPlayer.ToString() + _tbPlayerInMatch.IdPlayer.ToString();
+            _tbPlayerInMatch.Id = int.Parse(stringId);
+            _tbPlayerInMatch.IdTeam = _tbMatch.TeamRed;
+            //_tbPlayerInMatch.IdPlayer = PlayerRepos.GetById(_tbPlayerInMatch.IdPlayer);
         }
 
 
