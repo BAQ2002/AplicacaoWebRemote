@@ -10,29 +10,36 @@ namespace BLL
 {
     public static class MatchRepos
     {
-        public static void Add(Match _match)
+        public static TbMatch Add(Match _match)
         {
 
+            TbMatch _tbMatch = new TbMatch();
 
+            foreach (TbPlayerInMatch m in _match.TeamBlue) {
+                m.IdTeam = _tbMatch.TeamBlue; 
+                PlayerInMatchRepos.Add(m);
+                PlayerRepos.PlayerTracker(m);
+            }
+            foreach (TbPlayerInMatch m in _match.TeamRed) {
+                m.IdTeam = _tbMatch.TeamRed; 
+                PlayerInMatchRepos.Add(m);
+                PlayerRepos.PlayerTracker(m);
+            }
 
-            foreach (TbPlayerInMatch m in _match.TeamBlue) { PlayerInMatchRepos.Add(m); }
-            foreach (TbPlayerInMatch m in _match.TeamRed) { PlayerInMatchRepos.Add(m); }
-
-
+            _tbMatch.Id = _match.Id;
+            _tbMatch.Date = _match.Date;
+            _tbMatch.WinsRed = _match.WinsRed;
+            _tbMatch.WinsBlue = _match.WinsBlue;
 
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                
-                TbMatch _tbMatch = new TbMatch();
-                         
-                _tbMatch.Id = _match.Id;
-                _tbMatch.Date = _match.Date;
-                _tbMatch.WinsRed = _match.WinsRed;
-                _tbMatch.WinsBlue = _match.WinsBlue;
+                //dbContext.
                 dbContext.Add(_tbMatch);
                 dbContext.SaveChanges();
 
             }
+            return _tbMatch;
         }
 
         public static Match GetById(int id)

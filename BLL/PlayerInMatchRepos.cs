@@ -59,7 +59,7 @@ namespace BLL
             
             string stringId = _tbMatch.Id.ToString() + _tbPlayerInMatch.IdPlayer.ToString() + _tbPlayerInMatch.IdPlayer.ToString();
             _tbPlayerInMatch.Id = int.Parse(stringId);
-            _tbPlayerInMatch.IdTeam = _tbMatch.TeamRed;
+            //if (_tbPlayerInMatch.)           
             //_tbPlayerInMatch.IdPlayer = PlayerRepos.GetById(_tbPlayerInMatch.IdPlayer);
         }
 
