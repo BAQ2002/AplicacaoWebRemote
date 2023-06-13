@@ -44,7 +44,20 @@ namespace BLL
                 return players;
             }
         }
+        public static List<TbPlayerInMatch> GetByPlayerId(int playerId)
+        {
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
+            {
+                var playerMatchs = dbContext.TbPlayerInMatches.Where(p => p.IdPlayer == playerId).ToList();
+                return playerMatchs;
+            }
+        }
 
+        public static void TbPlayerInMatchBuilder(TbMatch _tbMatch)
+        {
+            TbPlayerInMatch _tbPlayerInMatch = new TbPlayerInMatch();
+            _tbPlayerInMatch.Id = _tbMatch.Id;
+        }
 
 
     }

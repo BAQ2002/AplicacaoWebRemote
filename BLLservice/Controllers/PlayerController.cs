@@ -82,6 +82,28 @@ namespace BLLservice.Controllers
             }
         }
 
+
+        [HttpPut(Name = "UpdatePlayer")]
+        public ActionResult<TbPlayer> UpdatePlayer(TbPlayer player)
+        {
+            try
+            {
+                if(player != null) 
+                {
+                    TbPlayer _player = new TbPlayer();
+                    _player.Username = player.Username;
+                    PlayerRepos.Update(_player);
+
+                    return Ok(_player);
+                }
+                return NotFound();
+            }
+                
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 
   
