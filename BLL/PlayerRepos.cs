@@ -107,8 +107,6 @@ namespace BLL
                 player.Level = PlayerBuilder(_player.IdPlayer).Level;
                 player.Rank = PlayerBuilder(_player.IdPlayer).Rank;
                 player.Mmr = PlayerBuilder(_player.IdPlayer).Mmr;
-
-                dbContext.SaveChanges();
             }
         }
 

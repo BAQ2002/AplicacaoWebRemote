@@ -13,33 +13,35 @@ namespace BLL
         public static TbMatch Add(Match _match)
         {
 
-            TbMatch _tbMatch = new TbMatch();
-
-            foreach (TbPlayerInMatch m in _match.TeamBlue) {
-                m.IdTeam = _tbMatch.TeamBlue; 
-                PlayerInMatchRepos.Add(m);
-                PlayerRepos.PlayerTracker(m);
-            }
-            foreach (TbPlayerInMatch m in _match.TeamRed) {
-                m.IdTeam = _tbMatch.TeamRed; 
-                PlayerInMatchRepos.Add(m);
-                PlayerRepos.PlayerTracker(m);
-            }
-
-            _tbMatch.Id = _match.Id;
-            _tbMatch.Date = _match.Date;
-            _tbMatch.WinsRed = _match.WinsRed;
-            _tbMatch.WinsBlue = _match.WinsBlue;
 
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-               
-                //dbContext.
+                TbMatch _tbMatch = new TbMatch();
+
+                foreach (TbPlayerInMatch m in _match.TeamBlue)
+                {
+                    //m.IdTeam = _tbMatch.TeamBlue; 
+                    PlayerInMatchRepos.Add(m);
+                    //PlayerRepos.PlayerTracker(m);
+                }
+                foreach (TbPlayerInMatch m in _match.TeamRed)
+                {
+                    //m.IdTeam = _tbMatch.TeamRed; 
+                    PlayerInMatchRepos.Add(m);
+                    //PlayerRepos.PlayerTracker(m);
+                }
+
+                _tbMatch.Id = _match.Id;
+                _tbMatch.Date = _match.Date;
+                _tbMatch.WinsRed = _match.WinsRed;
+                _tbMatch.WinsBlue = _match.WinsBlue;
+
                 dbContext.Add(_tbMatch);
                 dbContext.SaveChanges();
+                return _tbMatch;
 
             }
-            return _tbMatch;
+            
         }
 
         public static Match GetById(int id)

@@ -108,6 +108,24 @@ namespace BLLservice.Controllers
             }
         }
 
+
+        [HttpDelete(Name = "DeletePlayer")]
+        public ActionResult DeletePlayer(int id)
+        {
+            try
+            {
+                var player = PlayerRepos.GetById(id);
+                PlayerRepos.Excluir(player);
+                return Ok(player);
+                
+            }
+
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
     }
 }
 
