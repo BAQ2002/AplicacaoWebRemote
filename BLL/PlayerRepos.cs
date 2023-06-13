@@ -70,18 +70,21 @@ namespace BLL
 
         }
 
-        public static void PlayerBuilder(TbPlayer _player)
+        public static TbPlayer PlayerBuilder(int Id)
         {  
+
+            TbPlayer _player = new TbPlayer();
             
-            _player.Kills = PlayerInMatchRepos.GetByPlayerId(_player.Id).Sum(pInMatch => pInMatch.Kills);                
-            _player.Deaths = PlayerInMatchRepos.GetByPlayerId(_player.Id).Sum(pInMatch => pInMatch.Deaths);
-            _player.Assists = PlayerInMatchRepos.GetByPlayerId(_player.Id).Sum(pInMatch => pInMatch.Assists); 
-            _player.Experience = PlayerInMatchRepos.GetByPlayerId(_player.Id).Sum(pInMatch => pInMatch.Points);
+            _player.Kills = PlayerInMatchRepos.GetByPlayerId(Id).Sum(pInMatch => pInMatch.Kills);                
+            _player.Deaths = PlayerInMatchRepos.GetByPlayerId(Id).Sum(pInMatch => pInMatch.Deaths);
+            _player.Assists = PlayerInMatchRepos.GetByPlayerId(Id).Sum(pInMatch => pInMatch.Assists); 
+            _player.Experience = PlayerInMatchRepos.GetByPlayerId(Id).Sum(pInMatch => pInMatch.Points);
             _player.Level = (int)Math.Ceiling((double)_player.Experience / 10000);            
             _player.Rank = (int)Math.Ceiling((double)_player.Mmr / 100);
-            _player.Wins =
-
+            _player.Wins = 
             _player.Mmr = _player.Wins * 25 - _player.Losses * 25;
+
+            return _player;
         }
 
 

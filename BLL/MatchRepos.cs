@@ -10,10 +10,25 @@ namespace BLL
 {
     public static class MatchRepos
     {
-        public static void Add(TbMatch _tbMatch)
+        public static void Add(Match _match)
         {
+
+
+
+            foreach (TbPlayerInMatch m in _match.TeamBlue) { PlayerInMatchRepos.Add(m); }
+            foreach (TbPlayerInMatch m in _match.TeamRed) { PlayerInMatchRepos.Add(m); }
+
+
+
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
+               
+                TbMatch _tbMatch = new TbMatch();
+                         
+                _tbMatch.Id = _match.Id;
+                _tbMatch.Date = _match.Date;
+                _tbMatch.WinsRed = _match.WinsRed;
+                _tbMatch.WinsBlue = _match.WinsBlue;
                 dbContext.Add(_tbMatch);
                 dbContext.SaveChanges();
 
