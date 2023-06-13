@@ -10,8 +10,8 @@ namespace MODEL
     {
         public int Id { get; set; }
 
-        public List<TbPlayer>? TeamRed { get; set; }
-        public List<TbPlayer>? TeamBlue { get; set; }
+        public List<TbPlayerInMatch>? TeamRed { get; set; }
+        public List<TbPlayerInMatch>? TeamBlue { get; set; }
 
         public int WinsRed { get; set; }
 

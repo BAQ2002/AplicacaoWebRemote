@@ -19,18 +19,20 @@ namespace BLL
 
             }
         }
+
         public static Match GetById(int id)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                 var _tbMatch = dbContext.TbMatches.Single(P => P.Id == id);
 
-                Match match = MatchCronc(_tbMatch);
+                Match match = MatchBuilder(_tbMatch);
                
                 return match;
 
             }
         }
+
         public static List<Match> GetAll()
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
@@ -41,15 +43,13 @@ namespace BLL
 
                 foreach (TbMatch m in _tbMatch)
                 {
-                    list.Add(MatchCronc(m));
+                    list.Add(MatchBuilder(m));
                 }
                 return list;
             }
         }
 
-
-
-        private static Match MatchCronc(TbMatch _tbMatch)
+        private static Match MatchBuilder(TbMatch _tbMatch)
         {
             Match match = new Match();
             match.Id = _tbMatch.Id;

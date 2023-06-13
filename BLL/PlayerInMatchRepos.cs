@@ -36,11 +36,11 @@ namespace BLL
             }
         }
 
-        public static List<TbPlayer> GetByTeam(int id)
+        public static List<TbPlayerInMatch> GetByTeam(int teamId)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-                var players = dbContext.TbPlayers.Where(p => p.Id == id).ToList();
+                var players = dbContext.TbPlayerInMatches.Where(p => p.IdTeam == teamId).ToList();
                 return players;
             }
         }
