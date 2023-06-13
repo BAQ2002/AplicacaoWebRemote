@@ -10,3 +10,15 @@ C:\Users\anton\source\repos\AplicacaoWeb\MODEL\obj\Debug\net6.0\MODEL.dll
 C:\Users\anton\source\repos\AplicacaoWeb\MODEL\obj\Debug\net6.0\refint\MODEL.dll
 C:\Users\anton\source\repos\AplicacaoWeb\MODEL\obj\Debug\net6.0\MODEL.pdb
 C:\Users\anton\source\repos\AplicacaoWeb\MODEL\obj\Debug\net6.0\ref\MODEL.dll
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\bin\Debug\net6.0\MODEL.deps.json
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\bin\Debug\net6.0\MODEL.dll
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\bin\Debug\net6.0\MODEL.pdb
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.csproj.AssemblyReference.cache
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.AssemblyInfoInputs.cache
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.AssemblyInfo.cs
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.csproj.CoreCompileInputs.cache
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.dll
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\refint\MODEL.dll
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\MODEL.pdb
+C:\Users\victo\Source\Repos\AplicacaoWebRemote\MODEL\obj\Debug\net6.0\ref\MODEL.dll
