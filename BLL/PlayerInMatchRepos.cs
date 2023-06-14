@@ -53,14 +53,26 @@ namespace BLL
             }
         }
 
-        public static void TbPlayerInMatchBuilder(TbMatch _tbMatch)
+        public static TbPlayerInMatch TbPlayerInMatchIdMaker(Match _match)
         {
             TbPlayerInMatch _tbPlayerInMatch = new TbPlayerInMatch();
             
-            string stringId = _tbMatch.Id.ToString() + _tbPlayerInMatch.IdPlayer.ToString() + _tbPlayerInMatch.IdPlayer.ToString();
+            string stringId = _match.Id.ToString() + _tbPlayerInMatch.IdPlayer.ToString() + _tbPlayerInMatch.IdPlayer.ToString();
             _tbPlayerInMatch.Id = int.Parse(stringId);
-            _tbPlayerInMatch.IdTeam = _tbMatch.TeamRed;
-            //_tbPlayerInMatch.IdPlayer = PlayerRepos.GetById(_tbPlayerInMatch.IdPlayer);
+
+            return _tbPlayerInMatch;
+        }
+
+        public static void CallIdMaker(TbPlayerInMatch _tbPlayerInMatch)
+        {
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
+            {
+
+                //var player = dbContext.TbPlayers.Single(P => P.Id == _player.IdPlayer);
+               // _tbPlayerInMatch.Id = TbPlayerInMatchIdMaker().Id;
+            }
+
+
         }
 
 

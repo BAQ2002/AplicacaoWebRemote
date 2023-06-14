@@ -33,14 +33,17 @@ namespace BLLservice.Controllers
         [HttpGet("{id}", Name = "GetPlayerById")]
         public ActionResult<TbPlayer> GetPlayerById(int id)
         {
-            TbPlayer _player = PlayerRepos.GetById(id);
-
+        TbPlayer _player = PlayerRepos.GetById(id);
+        
             try
             {                
-                if (_player != null) { return Ok(_player); }
+                if (_player != null) 
+                { 
+                    return Ok(_player); 
+                }
                 return NotFound();
             }
-
+        
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
@@ -48,22 +51,22 @@ namespace BLLservice.Controllers
         }
 
 
-        [HttpGet("{Username}", Name = "GetPlayerByUsername")]
-        public ActionResult<TbPlayer> GetPlayerByUsername(string username)
-        {
-            TbPlayer _player = PlayerRepos.GetByUsername(username);
+        //[HttpGet("{Username}", Name = "GetPlayerByUsername")]
+        //public ActionResult<TbPlayer> GetPlayerByUsername(string username)
+        //{
+        //   TbPlayer _player = PlayerRepos.GetByUsername(username);
+        //
+        //   try
+        //   {
+        //      if (_player != null) { return Ok(_player); }
+        //       return NotFound();
+        //   }
 
-            try
-            {
-                if (_player != null) { return Ok(_player); }
-                return NotFound();
-            }
-
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-        }
+        //  catch (Exception ex)
+        //  {
+        //     return StatusCode(500, ex.Message);
+        //  }
+        //}
 
 
         [HttpPost(Name = "AddPlayer")]
@@ -104,11 +107,25 @@ namespace BLLservice.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+
+        [HttpDelete(Name = "DeletePlayer")]
+        public ActionResult DeletePlayer(int id)
+        {
+            try
+            {
+                var player = PlayerRepos.GetById(id);
+                PlayerRepos.Excluir(player);
+                return Ok(player);
+                
+            }
+
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
     }
-
-  
-
-
-
 }
 
