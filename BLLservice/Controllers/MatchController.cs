@@ -49,12 +49,12 @@ namespace BLLservice.Controllers
 
 
         [HttpPost(Name = "AddMatch")]
-        public ActionResult<TbMatch> AddMatch(TbMatch match)
+        public ActionResult<Match> AddMatch(Match match)
         {
             try
             {
-                MatchRepos.Add(match);
-                TbMatch _match = match;
+                
+                Match _match = MatchRepos.Add(match);
                 return _match == null ? NotFound() : Ok(_match);
             }
 

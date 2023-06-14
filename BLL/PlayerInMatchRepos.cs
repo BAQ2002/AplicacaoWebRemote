@@ -64,5 +64,11 @@ namespace BLL
         }
 
 
+        public static void addByTeam(List<TbPlayerInMatch> list)
+        {
+           foreach (var item in list) {PlayerInMatchRepos.Add(item); } }
+        
+
+
     }
 }
