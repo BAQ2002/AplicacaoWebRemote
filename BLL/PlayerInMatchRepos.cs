@@ -1,4 +1,5 @@
 ﻿using DAL.DBContext;
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using MODEL;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,8 @@ namespace BLL
             {
                 dbContext.Add(_tbPlayerInMatch);
                 dbContext.SaveChanges();
-
             }
+            
         }
         public static TbPlayerInMatch GetById(int id)
         {
@@ -44,6 +45,7 @@ namespace BLL
                 return players;
             }
         }
+       
         public static List<TbPlayerInMatch> GetByPlayerId(int playerId)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
@@ -75,12 +77,47 @@ namespace BLL
 
         }
 
-
         public static void addByTeam(List<TbPlayerInMatch> list)
         {
-           foreach (var item in list) {PlayerInMatchRepos.Add(item); } }
-        
+           foreach (var item in list) {
 
+                PlayerInMatchRepos.Add(item);
+                PlayerRepos.PlayerBuilder(item.IdPlayer);
+
+
+            }
+        }
+        
+        public static int getWins(int _idPlayer)
+        {
+           
+                int wins =0;
+                var players = PlayerInMatchRepos.GetByPlayerId(_idPlayer);
+                
+                foreach(var player in players) {
+
+
+                    if (MatchRepos.checkWin(player.IdTeam)==true) {
+                    wins++;
+                    }
+                
+                
+      
+                }
+
+                return wins;
+            
+
+
+        }
+
+
+        public static int getLosses(int _idPlayer)
+        {
+            int wins =getWins(_idPlayer);
+            int total = PlayerInMatchRepos.GetByPlayerId(_idPlayer).Count;
+            return total-wins;
+        }
 
     }
 }

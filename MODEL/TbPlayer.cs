@@ -9,21 +9,21 @@ public partial class TbPlayer
 
     public string Username { get; set; } = null!;
 
-    public int Level { get; set; }
+    public int Level { get; set; } =0;
 
-    public int Experience { get; set; }
+    public int Experience { get; set; } = 0;
 
-    public int Rank { get; set; }
+    public int Rank { get; set; } = 0;
 
-    public int Mmr { get; set; }
+    public int Mmr { get; set; } = 0;
 
-    public int Kills { get; set; }
+    public int Kills { get; set; } =0;
 
-    public int Deaths { get; set; }
+    public int Deaths { get; set; } = 0;
 
-    public int Assists { get; set; }
+    public int Assists { get; set; } = 0;
 
-    public int Wins { get; set; }
+    public int Wins { get; set; } = 0;
 
-    public int Losses { get; set; }
+    public int Losses { get; set; } = 0;
 }

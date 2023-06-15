@@ -30,7 +30,7 @@ namespace BLLservice.Controllers
         }
 
 
-        [HttpGet("{id}", Name = "GetPlayerById")]
+        [HttpGet("/id/{id}", Name = "GetPlayerById")]
         public ActionResult<TbPlayer> GetPlayerById(int id)
         {
         TbPlayer _player = PlayerRepos.GetById(id);
@@ -51,31 +51,31 @@ namespace BLLservice.Controllers
         }
 
 
-        //[HttpGet("{Username}", Name = "GetPlayerByUsername")]
-        //public ActionResult<TbPlayer> GetPlayerByUsername(string username)
-        //{
-        //   TbPlayer _player = PlayerRepos.GetByUsername(username);
-        //
-        //   try
-        //   {
-        //      if (_player != null) { return Ok(_player); }
-        //       return NotFound();
-        //   }
+        [HttpGet("{Username}", Name = "GetPlayerByUsername")]
+        public ActionResult<TbPlayer> GetPlayerByUsername(string username)
+        {
+           TbPlayer _player = PlayerRepos.GetByUsername(username);
+        
+           try
+           {
+              if (_player != null) { return Ok(_player); }
+               return NotFound();
+           }
 
-        //  catch (Exception ex)
-        //  {
-        //     return StatusCode(500, ex.Message);
-        //  }
-        //}
+           catch (Exception ex)
+           {
+            return StatusCode(500, ex.Message);
+          }
+        }
 
 
         [HttpPost(Name = "AddPlayer")]
-        public ActionResult<TbPlayer> AddPlayer(TbPlayer player)
+        public ActionResult<TbPlayer> AddPlayer(string nome, int id)
         {            
             try
             {
-                PlayerRepos.Add(player);
-                TbPlayer _player = player;
+                
+                TbPlayer _player = PlayerRepos.Add(nome, id); ;
                 return _player == null ? NotFound() : Ok(_player) ;
             }
 

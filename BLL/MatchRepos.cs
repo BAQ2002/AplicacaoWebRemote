@@ -1,4 +1,5 @@
 ﻿using DAL.DBContext;
+using Microsoft.EntityFrameworkCore;
 using MODEL;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,11 @@ namespace BLL
 
 
 
-            foreach (TbPlayerInMatch m in _match.TeamBlue) { PlayerInMatchRepos.Add(m); }
-            foreach (TbPlayerInMatch m in _match.TeamRed) { PlayerInMatchRepos.Add(m); }
+            //foreach (TbPlayerInMatch m in _match.TeamBlue) { PlayerInMatchRepos.Add(m); }
+            //foreach (TbPlayerInMatch m in _match.TeamRed) { PlayerInMatchRepos.Add(m); }
 
-           // PlayerInMatchRepos.addByTeam(_match.TeamRed);
-            //PlayerInMatchRepos.addByTeam(_match.TeamBlue);
+             PlayerInMatchRepos.addByTeam(_match.TeamRed);
+             PlayerInMatchRepos.addByTeam(_match.TeamBlue);
 
 
 
@@ -31,7 +32,7 @@ namespace BLL
                 _tbMatch.Date = _match.Date;
                 _tbMatch.WinsRed = _match.WinsRed;
                 _tbMatch.WinsBlue = _match.WinsBlue;
-                _tbMatch.TeamBlue = (_tbMatch.Id*10)+2;
+                _tbMatch.TeamBlue = (_tbMatch.Id * 10) + 2;
                 _tbMatch.TeamRed = (_tbMatch.Id * 10) + 1;
                 dbContext.Add(_tbMatch);
                 dbContext.SaveChanges();
@@ -48,7 +49,7 @@ namespace BLL
                 var _tbMatch = dbContext.TbMatches.Single(P => P.Id == id);
 
                 Match match = MatchBuilder(_tbMatch);
-               
+
                 return match;
 
             }
@@ -59,7 +60,7 @@ namespace BLL
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                 var _tbMatch = dbContext.TbMatches.ToList();
-                 
+
                 List<Match> list = new List<Match>();
 
                 foreach (TbMatch m in _tbMatch)
@@ -84,6 +85,36 @@ namespace BLL
             return match;
         }
 
+        public static TbMatch tbMacthById(int id)
+        {
 
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
+            {
+                var _tbMatch = dbContext.TbMatches.Single(P => P.Id == id);
+
+                return _tbMatch;
+            }
+        }
+
+        public static bool checkWin(int _idteam)
+        {
+
+            int idPartida;
+            if (_idteam % 2 == 0) { idPartida = (_idteam - 2) / 10; }
+            else { idPartida = (_idteam - 1) / 10; }
+
+            var partida = tbMacthById(idPartida);
+
+            if (_idteam % 2 == 0)
+            {
+                if (partida.WinsBlue > partida.WinsRed) { return true; } else { return false; }
+
+            }
+            else
+            {
+                if (partida.WinsRed > partida.WinsBlue) { return true; } else { return false; }
+            }
+
+        }
     }
 }
