@@ -70,13 +70,14 @@ namespace BLL
             }
         }
 
-        public static void Update(TbPlayer _player)
+        public static TbPlayer Update(int _id, string newName)
         {
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
-                var player = dbContext.TbPlayers.Single(P => P.Id == _player.Id);
-                player.Username = _player.Username;
+                var player = dbContext.TbPlayers.Single(P => P.Id == _id);
+                player.Username = newName;
                 dbContext.SaveChanges();
+                return player;
             }
 
         }

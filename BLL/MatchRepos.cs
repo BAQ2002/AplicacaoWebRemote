@@ -73,6 +73,21 @@ namespace BLL
             }
         }
 
+        public static List<Match> GetByPlayerId(int id) 
+        { 
+            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext()) 
+            {   
+                List<Match> list = new List<Match>(); var PinMatch = PlayerInMatchRepos.GetByPlayerId(id);
+                    foreach (TbPlayerInMatch P in PinMatch)
+                    {    
+                        int idMatch = P.IdTeam / 10;
+                        var Match = MatchRepos.MatchBuilder(MatchRepos.tbMacthById(idMatch));
+                        list.Add(Match); 
+                    }
+                return list;
+            } 
+        }
+
         private static Match MatchBuilder(TbMatch _tbMatch)
         {
             Match match = new Match();

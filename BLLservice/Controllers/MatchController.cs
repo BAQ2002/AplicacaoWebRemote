@@ -64,5 +64,24 @@ namespace BLLservice.Controllers
             }
         }
 
+
+        [HttpGet("ByPlayerId/{id}", Name = "GetMatchByPlayerId")]
+        public ActionResult<Match> GetMatchByPlayerId(int id) 
+        {
+            try 
+            { 
+                List<Match> list = MatchRepos.GetByPlayerId(id); 
+                if (list != null) 
+                { 
+                    return Ok(list); 
+                }
+                return NotFound(); 
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(500, ex.Message); 
+            } 
+        }
+
     }
 }

@@ -30,7 +30,7 @@ namespace BLLservice.Controllers
         }
 
 
-        [HttpGet("/id/{id}", Name = "GetPlayerById")]
+        [HttpGet("ById/{id}", Name = "GetPlayerById")]
         public ActionResult<TbPlayer> GetPlayerById(int id)
         {
         TbPlayer _player = PlayerRepos.GetById(id);
@@ -51,7 +51,7 @@ namespace BLLservice.Controllers
         }
 
 
-        [HttpGet("{Username}", Name = "GetPlayerByUsername")]
+        [HttpGet("ByUsername/{Username}", Name = "GetPlayerByUsername")]
         public ActionResult<TbPlayer> GetPlayerByUsername(string username)
         {
            TbPlayer _player = PlayerRepos.GetByUsername(username);
@@ -86,20 +86,17 @@ namespace BLLservice.Controllers
         }
 
 
-        [HttpPut(Name = "UpdatePlayer")]
-        public ActionResult<TbPlayer> UpdatePlayer(TbPlayer player)
+        [HttpPut("updateUsername/{Id,Username}",Name = "UpdatePlayer")]
+        public ActionResult<TbPlayer> UpdatePlayer(int Id, string newName)
         {
             try
             {
-                if(player != null) 
-                {
+             
                     TbPlayer _player = new TbPlayer();
-                    _player.Username = player.Username;
-                    PlayerRepos.Update(_player);
-
+                    _player = PlayerRepos.Update(Id,newName);
                     return Ok(_player);
-                }
-                return NotFound();
+
+                  
             }
                 
             catch (Exception ex)

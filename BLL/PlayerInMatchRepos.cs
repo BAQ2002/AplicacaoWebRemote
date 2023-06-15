@@ -111,7 +111,6 @@ namespace BLL
 
         }
 
-
         public static int getLosses(int _idPlayer)
         {
             int wins =getWins(_idPlayer);
