@@ -16,11 +16,9 @@ namespace BLL
 
 
 
-            //foreach (TbPlayerInMatch m in _match.TeamBlue) { PlayerInMatchRepos.Add(m); }
-            //foreach (TbPlayerInMatch m in _match.TeamRed) { PlayerInMatchRepos.Add(m); }
+            
 
-             PlayerInMatchRepos.addByTeam(_match.TeamRed);
-             PlayerInMatchRepos.addByTeam(_match.TeamBlue);
+
 
 
 
@@ -36,6 +34,10 @@ namespace BLL
                 _tbMatch.TeamRed = (_tbMatch.Id * 10) + 1;
                 dbContext.Add(_tbMatch);
                 dbContext.SaveChanges();
+
+                PlayerInMatchRepos.addByTeam(_match.TeamRed);
+                PlayerInMatchRepos.addByTeam(_match.TeamBlue);
+
                 return MatchRepos.MatchBuilder(_tbMatch);
 
             }

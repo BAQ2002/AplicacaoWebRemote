@@ -96,7 +96,7 @@ namespace BLL
                 _player.Level = (int)Math.Ceiling((double)_player.Experience / 10000);
                 _player.Rank = (int)Math.Ceiling((double)_player.Mmr / 100);
                 _player.Wins = PlayerInMatchRepos.getWins(Id);
-                _player.Losses = 0; //PlayerInMatchRepos.getLosses(Id);
+                _player.Losses = PlayerInMatchRepos.getLosses(Id);
                 _player.Mmr = _player.Wins * 25 - _player.Losses * 25;
                 dbContext.SaveChanges();
             }
