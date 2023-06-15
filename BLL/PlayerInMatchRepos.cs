@@ -65,17 +65,7 @@ namespace BLL
             return _tbPlayerInMatch;
         }
 
-        public static void CallIdMaker(TbPlayerInMatch _tbPlayerInMatch)
-        {
-            using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
-            {
-
-                //var player = dbContext.TbPlayers.Single(P => P.Id == _player.IdPlayer);
-               // _tbPlayerInMatch.Id = TbPlayerInMatchIdMaker().Id;
-            }
-
-
-        }
+        
 
         public static void addByTeam(List<TbPlayerInMatch> list)
         {

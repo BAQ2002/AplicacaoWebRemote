@@ -14,14 +14,6 @@ namespace BLL
         public static Match Add(Match _match)
         {
 
-
-
-            
-
-
-
-
-
             using (var dbContext = new CUsersAntonSourceReposAplicacaowebDalDatabaseDatabase1MdfContext())
             {
                 TbMatch _tbMatch = new TbMatch();

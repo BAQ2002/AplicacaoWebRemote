@@ -46,14 +46,12 @@ namespace PL
             var response = await client.GetAsync("https://localhost:7071/api/Match/" + textBox1.Text);
             var jsonM = await response.Content.ReadAsStringAsync();
             Match MatchJson = JsonConvert.DeserializeObject<Match>(jsonM);
-            label1.Text = MatchJson.WinsBlue.ToString();
             GetPinMatchRed(MatchJson);
             GetPinMatchBlue(MatchJson);
             dataGridView1.DataSource = GetPinMatchRed(MatchJson);
             dataGridView2.DataSource = GetPinMatchBlue(MatchJson);
             dataGridView1.Refresh();
             dataGridView2.Refresh();
-            label1.Refresh();
         }
     }
 }

@@ -34,21 +34,21 @@
             // 
             // button1
             // 
-            button1.Location = new Point(75, 84);
+            button1.Location = new Point(46, 49);
             button1.Name = "button1";
-            button1.Size = new Size(228, 74);
+            button1.Size = new Size(152, 58);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Buscar Jogador";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(446, 84);
+            button2.Location = new Point(234, 49);
             button2.Name = "button2";
-            button2.Size = new Size(209, 74);
+            button2.Size = new Size(158, 58);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = "Buscar Partida";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -56,11 +56,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(456, 308);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "TRACKER.IGL";
             ResumeLayout(false);
         }
 
