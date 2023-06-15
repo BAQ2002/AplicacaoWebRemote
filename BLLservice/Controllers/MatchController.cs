@@ -49,12 +49,12 @@ namespace BLLservice.Controllers
 
 
         [HttpPost(Name = "AddMatch")]
-        public ActionResult<TbMatch> AddMatch(Match match)
+        public ActionResult<Match> AddMatch(Match match)
         {
             try
             {
                 
-                TbMatch _match = MatchRepos.Add(match);
+                Match _match = MatchRepos.Add(match);
                 return _match == null ? NotFound() : Ok(_match);
             }
 
@@ -62,6 +62,25 @@ namespace BLLservice.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
+        }
+
+
+        [HttpGet("ByPlayerId/{id}", Name = "GetMatchByPlayerId")]
+        public ActionResult<Match> GetMatchByPlayerId(int id) 
+        {
+            try 
+            { 
+                List<Match> list = MatchRepos.GetByPlayerId(id); 
+                if (list != null) 
+                { 
+                    return Ok(list); 
+                }
+                return NotFound(); 
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(500, ex.Message); 
+            } 
         }
 
     }

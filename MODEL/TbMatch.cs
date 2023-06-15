@@ -7,9 +7,9 @@ public partial class TbMatch
 {
     public int Id { get; set; }
 
-    public int TeamRed => Id * 10 + 1;
+    public int TeamRed { get; set; }
 
-    public int TeamBlue => Id * 10 + 2;
+    public int TeamBlue { get; set; }
 
     public int WinsRed { get; set; }
 
